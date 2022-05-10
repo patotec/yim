@@ -1,0 +1,144 @@
+{% load static  %}
+<!doctype html>
+
+ <html class="no-js" lang="en"> 
+    
+
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="Apexcryptosfx, forex trading, broker, ">
+        <meta name="title" content="Apexcryptosfx, broker, forex trading">
+		<meta name="description" content="A trading platform for online trading and investments from the broker Apexcryptosfx. Start earning money with millions of traders worldwide! expertoptionfx helps you take your trading to the next level our most exciting broker. 100s of commission free assets, 1:400 leverage, 24-hour support and more! Trade now!">
+        <meta name="author" content="Apexcryptosfx">
+       
+        <title>Apexcryptosfx || Currency Html5 Template</title>
+        
+		<link rel="shortcut icon" type="image/x-icon" href="/static/img/favicon.png">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+        <!-- Font Awesome Icons CSS -->
+        <link rel="stylesheet" href="/static/css/font-awesome.min.css">
+        <!-- Themify Icons CSS -->
+        <link rel="stylesheet" href="/static/css/themify-icons.css">
+        <!-- Elegant Font Icons CSS -->
+        <link rel="stylesheet" href="/static/css/elegant-font-icons.css">
+        <!-- Elegant Line Icons CSS -->
+        <link rel="stylesheet" href="/static/css/elegant-line-icons.css">
+		<!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+        <!-- animate CSS -->
+        <link rel="stylesheet" href="/static/css/animate.min.css">
+		<!-- Venobox CSS -->
+        <link rel="stylesheet" href="/static/css/venobox/venobox.css">
+		<!-- OWL-Carousel CSS -->
+        <link rel="stylesheet" href="/static/css/owl.carousel.css">
+        <!-- Nivo Slider CSS -->
+        <link rel="stylesheet" href="/static/css/nivo-slider.css">
+        <!-- Slick Nav CSS -->
+        <link rel="stylesheet" href="/static/css/slicknav.min.css">
+		<!-- Main CSS -->
+        <link rel="stylesheet" href="/static/css/main.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+		<!-- Responsive CSS -->
+        <link rel="stylesheet" href="/static/css/responsive.css">
+
+        <script src="/static/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    </head>
+    <style>
+          .con {
+              position: relative;
+              width: 100%;
+              max-width: 400px;
+            }
+            
+            .con img {
+              width: 100%;
+              height: auto;
+            }
+            
+            .con .btn {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              -ms-transform: translate(-50%, -50%);
+              border-radius: 50%;
+              color: #c99c3b;
+              font-size: 16px;
+              padding: 12px 24px;
+              border: none;
+              cursor: pointer;
+             background-color: rgb(18, 18, 16);
+              text-align: center;
+            }
+    </style>
+<!-- <div id='preloader' >
+      <div class='loader' >
+          <img src="/static/img/preloader.gif" width="50" alt="">
+      </div>
+  </div><!-- Preloader -->
+
+  <header id="header" class="header_section bd-bottom">
+      <div class="top_header">
+          <div class="container">
+              <div class="top_content_wrap row">
+                  <div class="col-sm-8">
+                      <ul class="left_info">
+                          <li><a href="#"><i class="ti-email"></i>info@apexcryptosfx</a></li>
+                          <li><a href="{% url 'userurl:login' %}"><i class="ti-user"></i>Login</a></li>
+                          <li><a href="{% url 'userurl:signup' %}"><i class="ti-pencil-alt"></i>Register</a></li>
+                         
+                          <li>
+                            <div id="google_translate_element"></div>
+                          <script type="text/javascript">
+                          function googleTranslateElementInit() {
+                            new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+                          }
+                       </script>
+</li>
+                      </ul>
+                  </div>
+                  <div class="col-sm-4 d-none d-md-block">
+                      <ul class="right_info">
+                          <li><a href="{% url 'userurl:login' %}"><i class="ti-user"></i>Login</a></li>
+                          <li><a href="{% url 'userurl:signup' %}"><i class="ti-pencil-alt"></i>Register</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="bottom_header">
+         <div class="container">
+             <div class="bottom_content_wrap row">
+                 <div class="col-sm-4">
+                    <a href="#"><img src="/static/img/icon-6.png" alt="Brand"></a>
+                 </div>
+                 <div class="col-sm-8 text-right">
+                     <ul id="mainmenu" class="nav navbar-nav nav-menu">
+                          <li class="active"> <a href="{% url 'indexurl:index' %}">Home</a>
+                             
+                          </li>
+                          <li><a href="#about">About</a> 
+                             
+                          </li>
+                          <li> <a href="#service">Service</a></li>
+                        
+                          <li> <a href="{% url 'indexurl:contact' %}">Contact</a></li>
+                      </ul>
+                      <a href="{% url 'userurl:signup' %}" class="button_1">Register Now</a>
+                 </div>
+             </div>
+         </div>
+      </div>
+  </header><!-- Header Section -->
+  <div class="ticker_wrapper bd-bottom">
+    <ul id="webTicker">
+        <script src="https://widgets.coingecko.com/coingecko-coin-price-marquee-widget.js"></script>
+        <coingecko-coin-price-marquee-widget  coin-ids="bitcoin,ethereum,eos,ripple,litecoin" currency="usd" background-color="#ffffff" locale="en"></coingecko-coin-price-marquee-widget>
+    </ul>
+</div><!-- Ticker -->
+
+
+  

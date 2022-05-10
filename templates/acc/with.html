@@ -1,0 +1,68 @@
+{% extends 'acc/base.html' %}
+{% load static %}
+{% block content %}
+<!-- End Sidebar -->
+        <div class="main-panel bg-dark">
+			<div class="content bg-dark">
+				<div class="page-inner">
+					<div class="mt-2 mb-4">
+					    <h1 class="title1 d-inline text-light">Request for Withdrawal</h1>
+                        <div class="d-inline">
+                            <div class="float-right btn-group">
+                     <a class="btn btn-primary btn-sm" href=""> <i class="fa fa-envelope"></i> Request OTP</a>          
+                                                               
+                            </div>
+                        </div>
+                        					</div>
+					<div>
+    </div>					<div>
+    </div>                    
+					<div class="mb-5 row">
+                        <div class="col-lg-8 offset-md-2">
+                            <div class="p-md-4 p-2 rounded card bg-dark">
+                                <div class="card-body">
+                                <div class="mb-3 alert alert-success">
+                                    <h4 class="text-dark">Your Payment Method is <strong>Bitcoin</strong></h4>
+                                </div>
+                                    <form action="" method="post">
+                                            {% csrf_token %}
+                                            {% include 'messages.html' %}
+                                        <div class="form-group">
+                                            <h5 class="text-light">Enter Amount to withdraw</h5>
+                                            <input class="form-control text-light bg-dark" placeholder="Enter Amount" type="number" name="amount" required>
+                                        </div>
+                                        <input value="Bitcoin"  type="hidden" name="method">
+
+                                                                                    <div class="form-group">
+                                                <h5 class="text-light">Enter OTP</h5>
+                                                <input class="form-control text-light bg-dark" placeholder="Enter Code" type="text" name="otpcode" required>
+                                                <small class="text-light">OTP will be sent to your email when you request</small>
+                                            </div> 
+                                                                                                                                                                            <div class="form-group">
+                                                    <h5 class="text-light">Enter Bitcoin Address </h5>
+                                                    <input class="form-control text-light bg-dark" placeholder="Enter Bitcoin Address" type="text" name="details" required>
+                                                    <small class="text-light">Bitcoin is not a default withdrawal option in your account, please enter the correct wallet address to recieve your funds.</small>
+                                                </div>  
+                                                                                        
+                                                                                <div class="form-group">
+                                            <button class="btn btn-primary" type='submit'>Complete Request</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+					</div>
+				</div>
+			</div>
+					<footer class="footer bg-dark text-light">
+					<div class="container-fluid">
+						<div class="text-center row copyright text-align-center">
+							<p>All Rights Reserved &copy; Apexcryptosfx 2021</p>
+						</div>
+					</div>
+				</footer>
+			</div>
+		</div>
+	</div>
+
+	{% endblock content %}

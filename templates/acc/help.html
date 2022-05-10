@@ -1,0 +1,55 @@
+
+    
+{% extends 'acc/base.html' %}
+{% load static %}
+{% block content %}       
+<!-- End Sidebar -->
+        <div class="main-panel bg-dark">
+			<div class="content bg-dark">
+				<div class="page-inner">
+					<div>
+    </div>					<div>
+    </div>					<div class="mb-5 row p-md-3">
+						<div class="shadow col-12 p-md-2">
+							<div class="col-12 text-center bg-dark p-3">
+								<h1 class="title1 text-light">Apexcryptosfx Support</h1>
+								<div class="sign-up-row widget-shadow text-light">
+									<h4 class="text-light">For inquiries, suggestions or complains. Contact us using the form below</h4>
+									<!--<h1 class="mt-3 text-primary"> <a href="mailto:support@onlintrade.com">support@onlintrade.com</a> </h1>-->
+								</div>
+							</div>
+							<div class="pb-5 col-md-8 offset-md-2">
+								<form method="post" action="">
+                                        {% csrf_token %}
+                                        {% include 'messages.html' %}
+									<div class="form-group">
+										<input type="hidden" name="email" value="{{user.email}}">
+									</div>
+									
+									<div class="form-group">
+										<h5 for="" class="text-light">Message<span class=" text-danger">*</span></h5>
+										<textarea name="message" class="form-control text-light bg-dark" rows="5"></textarea>
+									</div>
+									<div class="">
+										<input type="submit" class="py-2 btn btn-primary btn-block" value="Send">
+									</div>
+								</form>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+    				<footer class="footer bg-dark text-light">
+					<div class="container-fluid">
+						<div class="text-center row copyright text-align-center">
+							<p>All Rights Reserved &copy; Ledgerscoin 2021</p>
+						</div>
+					</div>
+				</footer>
+			</div>
+		</div>
+	</div>
+
+				<!--   Core JS Files   -->
+	{% endblock content %}

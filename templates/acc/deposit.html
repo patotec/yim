@@ -1,0 +1,140 @@
+{% extends 'acc/base.html' %}
+{% load static %}
+{% block content %}
+<!-- End Sidebar -->
+        <div class="main-panel bg-dark">
+			<div class="content bg-dark">
+				<div class="page-inner">
+					<div class="mt-2 mb-4">
+						<h1 class="title1 ">Fund Your Account</h1>
+					</div>
+					<div>
+    </div>					<div>
+    </div>					<div class="row">
+						<div class="col-md-12">
+							<div class="card bg-light">
+								<div class="card-body">
+									<div class="row">
+										<div class="col-md-8">
+													<div class="mt-2 mb-1 col-md-12">
+														<h5 class="card-title text-dark">Choose Payment Method from the list below</h5>
+													</div>
+													{% for i in wal %}
+													<div class="mb-2 col-md-6">
+														<a style="cursor: pointer;" data-method=""  class="text-decoration-none">
+															<div class="rounded shadow bg-light">
+																<div class="card-body">
+																	<span class="text-dark">
+																	<img src="{{i.image.url}}" alt="" class="" style="width: 25px;">
+																  {{i.name}}
+																	</span> 
+																</div>
+															</div>
+														</a>
+													</div>
+													<a href="{% url 'userurl:payment' i.slug %}"><button class="px-5 btn btn-primary btn-lg">Proceed</button></a>
+													{% endfor %}
+																																								<div class="mt-2 mb-1 col-md-12">
+															
+														</div>
+																										
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<script>
+				let paymethod = document.querySelector('#paymethod');
+				
+				function checkpamethd(id){
+					let url = "https://app.ledgerscoin.com/dashboard/get-method" + '/' + id;
+					fetch(url)
+					.then(function(res){
+						return res.json();
+					})
+					.then(function (response){
+						paymethod.value = response;
+						$.notify({
+							// options
+							icon: 'flaticon-alarm-1',
+							title: 'Payment Method',
+							message: 'you have chosen to pay with ' + ' ' + response,
+						},{
+							// settings
+							type: 'success',
+							allow_dismiss: true,
+							newest_on_top: false,
+							placement: {
+								from: "top",
+								align: "right"
+							},
+							offset: 20,
+							spacing: 10,
+							z_index: 1031,
+							delay: 5000,
+							timer: 1000,
+							animate: {
+								enter: 'animated fadeInDown',
+								exit: 'animated fadeOutUp'
+							},
+		
+						});
+					})
+					.catch(function(err){
+						console.log(err);
+					});
+				}
+				$('#submitpaymentform').on('submit', function() {
+					//alert('love');
+					if (paymethod.value == "") {
+						$.notify({
+							// options
+							icon: 'flaticon-alarm-1',
+							title: 'Select Payment Method',
+							message: 'Please choose a payment method by clicking on it',
+						},{
+							// settings
+							type: 'danger',
+							allow_dismiss: true,
+							newest_on_top: false,
+							placement: {
+								from: "top",
+								align: "right"
+							},
+							offset: 20,
+							spacing: 10,
+							z_index: 1031,
+							delay: 5000,
+							timer: 1000,
+							animate: {
+								enter: 'animated fadeInDown',
+								exit: 'animated fadeOutUp'
+							},
+		
+						});
+					}else {
+						let makepayurl = "https://app.ledgerscoin.com/dashboard/newdeposit"
+						//console.log(makepayurl);
+						document.getElementById("submitpaymentform").action = makepayurl;
+						
+					}
+					
+				});
+			</script>
+					<footer class="footer bg-light text-dark">
+					<div class="container-fluid">
+						<div class="text-center row copyright text-align-center">
+							<p>All Rights Reserved &copy; Ledgerscoin 2021</p>
+						</div>
+					</div>
+				</footer>
+			</div>
+		</div>
+	</div>
+{% endblock content %}

@@ -1,0 +1,76 @@
+
+ {% extends 'base.html' %}
+ {% load static %}
+ {% block content %}
+    <body>
+       
+        
+        <section class="page_header padding">
+            <div class="display-table">
+                <div class="table-cell">
+                    <div class="container">
+                       <div class="page_content">
+                           <h2>Contact <span>With Us</span></h2>
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item active">Contact</li>
+                            </ol>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- Page Header -->
+        
+        <section class="contact_section bd-bottom padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 xs-padding">
+                        <div class="contact_info">
+                           <h2>Contact Information</h2>
+                      
+                            <ul>
+                                
+                                <li><i class="ti-envelope"></i><span>Mail:</span>info@apexcryptosfx</li>
+                                <li><i class="ti-location-arrow"></i><span>Address:</span>  692 Eagle Lane Duluth, USA.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 xs-padding">
+                        <div class="contact_form">
+                            <h2>Send Us Message</h2>
+                            <p>Please don’t hesitate to chat with me just drop a line.</p>
+                            <form action="" method="POST" id="ajax_form" class="form-horizontal">
+                                {% csrf_token %}
+                                {% include 'messages.html' %}
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
+                                        <input type="text" id="name" name="name" class="form-control" placeholder="Name" required>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="email" id="email" name="email" class="form-control" placeholder="Email" required>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text"  name="subject" class="form-control" placeholder="Email" required>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-12">
+                                        <textarea id="message" name="message" class="form-control" placeholder="Message" required></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-12">
+                                        <button id="submit" class="button_1" type="submit">Send Message</button>
+                                    </div>
+                                </div>
+                                <div id="form-messages" class="alert" role="alert"></div>
+                            </form>
+                        </div><!-- /.contact_form -->
+                    </div>
+                </div>
+            </div>
+        </section><!-- /.Contact Section -->
+        
+   
+    </body>
+    {% endblock content %}

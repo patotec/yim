@@ -1,0 +1,73 @@
+{% extends 'acc/base.html' %}
+{% load static %}
+{% block content %}
+<!-- End Sidebar -->
+        <div class="main-panel bg-dark">
+			<div class="content bg-dark">
+				<div class="page-inner">
+					<div class="mt-2 mb-4">
+					<h1 class="title1 text-light">Request for Withdrawal</h1>
+					</div>
+					<div>
+    </div>					<div>
+    </div>					<div class="mb-5 row">
+										<div class="col-lg-4">
+						<div class="p-3 rounded card bg-dark">
+							<div class="card-body border-danger">
+								<h2 class="card-title mb-3 text-light"> Bitcoin</h2>
+								<h4 class="text-light">Minimum amount: <strong style="float:right;"> $10</strong></h4><br>
+								
+								<h4 class="text-light">Maximum amount:<strong style="float:right;"> $10000</strong></h4><br>
+								
+								<h4 class="text-light">Charge Type:<strong style="float:right;">percentage</strong></h4><br>
+								
+								<h4 class="text-light">Charges Amount: 
+									<strong style="float:right;"> 
+																					10%
+																			</strong>
+								</h4><br>
+								
+								<h4 class="text-light">Duration:<strong style="float:right;"> Instant</strong></h4><br>
+								<div class="text-center">
+										
+                                        <div class="form-group">
+												
+											<a href="{% url 'userurl:withal' %}"><button class="btn btn-primary" type='submit'><i class="fa fa-plus"></i> Request withdrawal</button></a>
+											</div>
+											
+							
+										
+																	</div>
+							</div>
+						</div>
+					</div>
+										</div>
+					<!-- Withdrawal Modal -->
+					<div id="withdrawdisabled" class="modal fade" role="dialog">
+						<div class="modal-dialog">
+						  <!-- Modal content-->
+						  <div class="modal-content">
+							<div class="modal-header bg-dark">
+							<h4 class="modal-title text-light">Withdrawal Status</h4>
+							  <button type="button" class="close text-light" data-dismiss="modal">&times;</button>
+							</div>
+							<div class="modal-body bg-dark">
+								<h4 class="text-light" >Withdrawal is Disabled at the moment, Please check back later</h4>  
+							</div>
+						  </div>
+						</div>
+					  </div>
+					  <!-- /Withdrawals Modal -->
+				</div>
+			</div>
+					<footer class="footer bg-dark text-light">
+					<div class="container-fluid">
+						<div class="text-center row copyright text-align-center">
+							<p>All Rights Reserved &copy; Ledgerscoin 2021</p>
+						</div>
+					</div>
+				</footer>
+			</div>
+		</div>
+	</div>
+{% endblock content %}

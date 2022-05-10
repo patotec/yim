@@ -1,0 +1,63 @@
+{% extends 'acc/base.html' %}
+{% load static %}
+{% block content %}
+<!-- End Sidebar -->
+		<div class="main-panel bg-dark">
+			<div class="content bg-dark">
+				<div class="page-inner">
+					<div class="mt-2 mb-4">
+						<h1 class="title1 text-light">Available packages</h1>
+					</div>
+					<div>
+    </div>					<div>
+    </div>					<div class="mb-5 row">
+        {% for i in con %}
+						<div class="col-lg-4">
+							<div class="pricing-table card purple border bg-dark shadow p-4">
+								<!-- Table Head -->
+								
+								<h2 class="text-light">{{i.name}}</h2>
+								<!-- Price -->
+								<div class="price-tag">
+									<span class="symbol text-light">$</span>
+									<span class="amount text-light">{{i.maxdeposit}}</span>
+								</div>
+								<!-- Features -->
+								<div class="pricing-features">
+									<div class="feature text-light">Minimum Possible Deposit:<span class="text-light">${{i.mindeposit}}</span></div>
+									<div class="feature text-light">Maximum Possible Deposit:<span  class="text-light">${{i.maxdeposit}}</span></div>
+									<div class="feature text-light">Gift Bonus:<span class="text-light">${{i.ref}}</span></div>
+									<div class="feature text-light">Duration:<span class="text-light">{{i.days}}</span></div>
+								</div> <br>
+								<!-- Button -->
+								<div class="">
+									<form method="post" action="">
+                                        {% csrf_token %}
+                                        {% include 'messages.html' %}
+										<h5 class="text-light">Amount to invest: (${{i.maxdeposit}} default)</h5>
+										<input type="number" min="{{i.mindeposit}}" max="{{i.maxdeposit}}" name="price" placeholder="Enter Amount" class="form-control text-light bg-dark"> <br>
+                                        <input type="hidden" name="duration" value="{{i.days}}">
+                                        <input type="hidden" name="name" value="{{i.name}}">
+										<!-- <input type="hidden" name="user" value="{{request.user.username}}"> -->
+										<input type="submit" class="btn btn-block pricing-action btn-primary" value="Join plan" >
+									</form>
+								</div>
+							</div>
+                        </div>
+                    {% endfor %}
+						
+											</div>
+				</div>	
+			</div>
+    				<footer class="footer bg-dark text-light">
+					<div class="container-fluid">
+						<div class="text-center row copyright text-align-center">
+							<p>All Rights Reserved &copy; Apexcryptosfx 2021</p>
+						</div>
+					</div>
+				</footer>
+			</div>
+		</div>
+	</div>
+
+{% endblock content %}

@@ -1,0 +1,437 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <body>
+        <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+              <img src="..." class="rounded me-2" alt="...">
+              <strong class="me-auto">Bootstrap</strong>
+              <small>11 mins ago</small>
+              <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+              Hello, world! This is a toast message.
+            </div>
+          </div>  
+     
+     
+        <section class="slider-section">
+            <div class="slider-wrapper">
+                <div id="main-slider" class="nivoSlider">
+                    <img src="/static/img/slider-1.jpg" alt="" title="#slider-caption-1"/>
+                    <img src="/static/img/slider-2.jpg" alt="" title="#slider-caption-2"/>
+                    <img src="/static/img/slider-3.jpg" alt="" title="#slider-caption-3"/>
+                </div><!-- /#main-slider -->
+
+                <div id="slider-caption-1" class="nivo-html-caption slider-caption">
+                    <div class="display-table">
+                        <div class="table-cell">
+                            <div class="container">
+                               <div class="slider-text">
+                                   <h1 class="wow fadeInLeft2" data-wow-delay="1s"><span>Invest In Apexcryptosfx</span><br><span>Easy Way To Trade your Cryptocurrencyes.</span></h1>
+                                    <p class="wow fadeInRight2" data-wow-delay="1s">Apexcryptosfx is the best Cloud mining with income from 1% to 20% per day for life!.</p>
+                                    <a href="{% url 'userurl:login' %}" class="button_1 wow bounceInUp" data-wow-delay="0.8s">Learn More</a>
+                                </div>
+                           </div>
+                        </div>
+                    </div>
+                </div> <!-- /#slider-caption-1 -->
+                <div id="slider-caption-2" class="nivo-html-caption slider-caption">
+                    <div class="display-table">
+                        <div class="table-cell">
+                            <div class="container">
+                               <div class="slider-text">
+                                    <h1 class="wow bounceInDown" data-wow-delay="1s"><span>Be Ready To Fly</span> <br><span>With Apexcryptosfx.</span></h1>
+                                    <p class="wow fadeInRight2" data-wow-delay="1s">Also get a registration bonus of $10, free 2 Gh / s mining <br> for live and up to 20% for each referral!.</p>
+                                    <a href="{% url 'userurl:login' %}" class="button_1 wow bounceInLeft" data-wow-delay="0.8s">Learn More</a>
+                                </div>
+                           </div>
+                        </div>
+                    </div>
+                </div> <!-- /#slider-caption-2 -->
+                <div id="slider-caption-3" class="nivo-html-caption slider-caption">
+                    <div class="display-table">
+                        <div class="table-cell">
+                            <div class="container">
+                               <div class="slider-text">
+                                    <h1 class="wow bounceInUp" data-wow-delay="1s"><span>Invest In Apexcryptosfx</span><br><span>Easy Way To Trade Bitcoin.</span></h1>
+                                    <p class="wow fadeInRight2" data-wow-delay="1s">We offer free consulting and the best project management <br>for your ideas, 100% delivery guaranteed.</p>
+                                    <a href="{% url 'userurl:login' %}" class="button_1 wow bounceInUp" data-wow-delay="0.8s">Learn More</a>
+                                </div>
+                           </div>
+                        </div>
+                    </div>
+                </div> <!-- /#slider-caption-3 -->
+            </div>
+        </section><!-- /#slider-Section -->
+        
+        <section class="about_section bd-bottom padding">
+            <div class="container">
+                <div class="section_heading align-center mb-40">
+                    <h4>Number One</h4>
+                    <h2>Buying And Selling Bitcoins</h2>
+                    <p>We are Always There for You When You Need us. <br>It has survived not only five centuries.</p>
+                </div><!-- /Section Heading -->
+                <div class="row about_box">
+                    {% for i in abs %}
+                    <div class="col-sm-6 xs-padding">
+                        <div class="about_info">
+                            <h3>{{i.name}}</h3>
+                            <p>{{i.body}}
+                            </p>
+
+                            <a href="{% url 'userurl:login' %}" class="button_1">More About Us</a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    <div class="col-sm-6 xs-padding">
+                        <div class="why_content">
+                            <h3>Why Choose Us?</h3>
+                            <ul>
+                                <li><i class="fa fa-check"></i>We offer the most package of service in the industry.</li>
+                                <li><i class="fa fa-check"></i>High customer retention rate. Printing and type company.</li>
+                                <li><i class="fa fa-check"></i>Our service features are unmatched in the center.</li>
+                                <li><i class="fa fa-check"></i>Afordable pricing offers. Printing and typesetting house.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about_image"></div>
+        </section><!-- /About Section -->
+        
+        <section class="service_section bg-grey padding">
+            <div class="container">
+                <div class="section_heading align-center mb-40">
+                    <h2>Apexcryptosfx <span>Services</span></h2>
+                  
+                </div><!-- /Section Heading -->
+                <div class="row service_lists">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="service_content">
+                           <img src="/static/img/icon-1.png" alt="services">
+                           <h3>Bitcoin Transaction</h3>
+
+                           <a href="{% url 'userurl:profile' %}">Read More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="service_content">
+                           <img src="/static/img/icon-2.png" alt="services">
+                           <h3>Instant Exchange</h3>
+                          
+                           <a href="{% url 'userurl:profile' %}">Read More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="service_content">
+                           <img src="/static/img/icon-3.png" alt="services">
+                           <h3>Investment Banking</h3>
+
+                           <a href="{% url 'userurl:profile' %}">Read More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="service_content">
+                           <img src="/static/img/icon-4.png" alt="services">
+                           <h3>Safe and Secure</h3>
+
+                           <a href="{% url 'userurl:profile' %}">Read More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="service_content">
+                           <img src="/static/img/icon-5.png" alt="services">
+                           <h3>Investment Planning</h3>
+
+                           <a href="{% url 'userurl:profile' %}">Read More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="service_content">
+                           <img src="/static/img/icon-6.png" alt="services">
+                           <h3>Instant Trading</h3>
+
+                           <a href="{% url 'userurl:profile' %}">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- /.Service Section -->
+        
+        <div id="counter" class="counter_section">
+		    <div class="container">
+                <ul class="row counters">
+                    <li class="col-md-3 col-sm-6 sm-padding">
+                        <div class="counter_content">
+                            <i class="ti-reload"></i>
+                            <h3 class="counter">85389</h3>
+                            <h4>TOTAL TRANSACTIONS</h4>
+                        </div>
+                    </li>
+                    <li class="col-md-3 col-sm-6 sm-padding">
+                        <div class="counter_content">
+                            <i class="ti-time"></i>
+                            <h3 class="counter">10293</h3>
+                            <h4>TRANSACTIONS PER HOUR</h4>
+                        </div>
+                    </li>
+                    <li class="col-md-3 col-sm-6 sm-padding">
+                        <div class="counter_content">
+                            <i class="ti-stats-up"></i>
+                            <h3 class="counter">50177</h3>
+                            <h4>LARGEST TRANSACTIONS</h4>
+                        </div>
+                    </li>
+                    <li class="col-md-3 col-sm-6 sm-padding">
+                        <div class="counter_content">
+                            <i class="ti-comments"></i>
+                            <h3 class="counter">669</h3>
+                            <h4>Positive Feedbacks</h4>
+                        </div>
+                    </li>
+                </ul>
+		    </div>
+		</div><!-- Counter Section -->
+        
+        <section class="team_section bd-bottom padding">
+            <div class="container">
+                <div class="section_heading align-center mb-40">
+                    <h2>Apexcryptosfx <span>Exparts</span></h2>
+                    <p>It has survived not only five centuries.</p>
+                </div><!-- /Section Heading -->
+                <div class="row">
+                    <div id="team_carousel" class="team_carousel owl-carousel">
+                        {% for i in inv  %}
+                        <div class="team_member">
+                            <img src="{{i.image.url}}" alt="team">
+                            <div class="overlay">
+                                <h3><span>{{i.name}}</span></h3>
+                             
+                                <ul class="team_social">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        {% endfor %}
+                       
+                    </div>
+                </div>
+            </div>
+        </section><!-- Team Section -->
+        
+        <section class="currency_section bg-grey padding">
+            <div class="container">
+                <div class="section_heading align-center mb-40">
+                    <h2>Cryptocurrency <span>Prices</span></h2>
+                </div><!-- /Section Heading -->
+                <div class="row prices_head">
+                   <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/markets/cryptocurrencies/prices-all/" rel="noopener" target="_blank"><span class="blue-text">Cryptocurrency Markets</span></a> by TradingView</div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js" async>
+    {
+    "width": 1000,
+    "height": 490,
+    "defaultColumn": "overview",
+    "screener_type": "crypto_mkt",
+    "displayCurrency": "USD",
+    "colorTheme": "light",
+    "locale": "en",
+    "isTransparent": true
+  }
+    </script>
+  </div>
+  <!-- TradingView Widget END -->
+                </div>
+            </div>
+        </section><!-- Currency Section -->
+        
+        <section class="callback_section">
+            <div class="container">
+                <div class="row">
+                    <div class="callback_men"></div>
+                    <div class="col-lg-6 offset-lg-6">
+                        <div class="cb_wrapper">
+                            <h2>Request A <span>Call Back</span></h2>
+                            <p>Please don’t hesitate to chat with me just drop a line.</p>
+                            <form action="{% url 'indexurl:contact' %}" method="POST" class="form-horizontal cb-form">
+                                {% csrf_token %}
+                                {% include 'messages.html' %}
+                                <div class="row form-group">
+                                    <div class="col-sm-6">
+                                        <input type="text" id="name" name="name" class="form-control" placeholder="Name" required>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="email" id="email" name="email" class="form-control" placeholder="Email" required>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text"  name="subject" class="form-control" placeholder="subject" required>
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-sm-12">
+                                        <textarea id="message" name="message" cols="30" rows="5" class="form-control" placeholder="Message" required></textarea>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <button id="submit" class="button_1" type="submit">Submit Now</button>
+                                    </div>
+                                </div>
+                                <div id="form-messages" class="alert" role="alert"></div>
+                            </form>
+                        </div><!-- /.contact_form -->
+                    </div>
+                </div>
+            </div>
+        </section><!-- Call Back Section -->
+        
+        <section class="pricing_section padding">
+            <div class="container">
+                <div class="section_heading align-center mb-40">
+                    <h2>Cryptocurrency <span>Packages</span></h2>
+                    
+                </div><!-- /Section Heading -->
+                <div class="row pricing_lists">
+                    {% for i in plan %}
+                    <div class="col-lg-3 col-sm-6 sm-padding">
+                       <div class="pricing_wrapper">
+                           <div class="pricing_top">
+                               <i class="fa fa-bitcoin"></i>
+                            </div>
+                            <div class="pricing_box">
+                                <div class="pricing_head">
+                                    <h3>{{i.name}}</h3>
+                                    <h2>${{i.price}} <span>Per Package</span></h2>
+                                </div>
+                                <ul class="pricing_mid">
+                                   <li>min-deposit:${{i.mindeposit}}</li> 
+                                  
+                                   <li>max-deposit:${{i.maxdeposit}}</li> 
+                                   <li>Profit:{{i.profit}}%</li> 
+                                   <li>Days:{{i.days}}</li> 
+                                   <li>Bonus:${{i.ref}}</li> 
+                                </ul>
+                                <div class="pricing_footer">
+                                    <a href="{% url 'userurl:depo' %}" class="button_1">Purchase</a>
+                                </div>
+                            </div>
+                       </div>
+                    </div>
+                    {% endfor %}
+                   
+                </div>
+            </div>
+        </section><!-- Pricing Section -->
+        <section>
+           <div class="container">
+               <div class="row">
+                   <div class="col">
+                    <script src="https://cdn.jsdelivr.net/gh/coinponent/coinponent@1.2.6/dist/coinponent.js"></script>
+
+                    <coin-ponent></coin-ponent>
+                   </div>
+                   <div class="col">
+                    <div class="con">
+                        <img src="https://www.indonez.com/html-demo/Wave/img/in-wave-image-1.jpg" alt="Snow" style="width:100%">
+                        <a href="#Geeks2"
+                        class="btn btn-lg "
+                        data-toggle="modal"> <i class="fa fa-play-circle" aria-hidden="true"></i> </a>
+                        <!-- <button class="btn">Button</button> -->
+                      </div>
+                    <div class="bs-example">
+                        <!-- <img src="https://www.indonez.com/html-demo/Wave/img/in-wave-image-1.jpg" alt="">
+                        <a href="#Geeks2"
+                           class="btn btn-lg "
+                           data-toggle="modal"> </a> -->
+             
+                        <div id="Geeks2" class="modal fade">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button"
+                                                class="close"
+                                                data-dismiss="modal"
+                                                aria-hidden="true">×</button>
+                                        <h4 class="modal-title"></h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <iframe id="Geeks3" width="450" height="350"
+                                                src=
+             "https://www.youtube.com/embed/F3QpgXBtDeo"
+                                                frameborder="0" allowfullscreen>
+                                        </iframe>
+                                    </div>
+                                </div>
+                            </div>
+                      </div>
+                  </div>
+                   </div>
+               </div>
+           </div>
+        </section>
+        
+        <section id="testimonial" class="testimonial_section padding">
+            <div class="container">
+                <div class="section_heading align-center mb-40">
+                    <h2>What Our <span>Clients</span> Say</h2>
+                </div><!-- /Section Heading -->
+                <ul id="testimonial_carousel" class="testimonial_items owl-carousel">
+                    {% for i in rev %}
+                    <li class="testimonial_item">
+                        <i class="fa fa-quote-left"></i>
+                        <p>{{i.body}}</p>
+                        <figure>
+                            <img src="{{i.image.url}}" alt="Client">
+                        </figure>
+                        <h4>{{i.name}}</h4>
+                    </li>
+                    {% endfor %}
+                  
+                </ul>
+            </div>
+        </section><!--  /.testimonial_section -->
+        
+      
+        
+        <div class="sponsor_section bg-grey">
+            <div class="container">
+                <ul id="sponsor_carousel" class="sponsor_items owl-carousel">
+                    <li class="sponsor_item">
+                        <img src="/static/img/1.png" alt="sponsor-image">
+                    </li>
+                    <li class="sponsor_item">
+                        <img src="/static/img/2.png" alt="sponsor-image">
+                    </li>
+                    <li class="sponsor_item">
+                        <img src="/static/img/3.png" alt="sponsor-image">
+                    </li>
+                    <li class="sponsor_item">
+                        <img src="/static/img/4.png" alt="sponsor-image">
+                    </li>
+                    <li class="sponsor_item">
+                        <img src="/static/img/5.png" alt="sponsor-image">
+                    </li>
+                    <li class="sponsor_item">
+                        <img src="/static/img/6.png" alt="sponsor-image">
+                    </li>
+                    <li class="sponsor_item">
+                        <img src="/static/img/7.png" alt="sponsor-image">
+                    </li>
+                    <li class="sponsor_item">
+                        <img src="/static/img/8.png" alt="sponsor-image">
+                    </li>
+                </ul>
+            </div>
+        </div><!-- ./sponsor_section -->
+        
+       
+
+    </body>
+    {% endblock content %}

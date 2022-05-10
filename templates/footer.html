@@ -1,0 +1,120 @@
+{% load static  %}
+<section class="widget_section padding">
+  <div class="container">
+      <div class="row widget_wrapper">
+          <div class="col-lg-3 col-sm-6 sm-padding">
+              <img class="mb-10" src="/static/img/icon-6.png" alt="Logo">
+             
+              <ul class="footer_social">
+                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                  <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                  <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+              </ul>
+          </div>
+          <div class="col-lg-3 col-sm-6 sm-padding">
+              <h3>Company</h3>
+              <ul class="widget_links">
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Our Services</a></li>
+                  <li><a href="#">Quick Orders</a></li>
+                  <li><a href="#">Contact</a></li>
+              </ul>
+          </div>
+          <div class="col-lg-3 col-sm-6 sm-padding">
+              <h3>Usefull Link</h3>
+              <ul class="widget_links">
+                  <li><a href="#">Help &amp; Support Center</a></li>
+                  <li><a href="#">Returens &amp; Refunds</a></li>
+                  <li><a href="#">Online Store</a></li>
+                  <li><a href="#">Terms &amp; Conditions</a></li>
+              </ul>
+          </div>
+          <div class="col-lg-3 col-sm-6 sm-padding">
+              <h3>Subscribe Newslatters</h3>
+  
+              <div class="subscribe_form">
+    <form action="#" class="subscribe_form">
+      <input type="email" name="email" id="subs-email" class="form_input" placeholder="Email Address...">
+      <button type="submit" class="submit">SUBSCRIBE</button>
+      <div class="clearfix"></div>
+      <div id="subscribe-result">
+        <p class="subscription-success"></p>
+        <p class="subscription-error"></p>
+      </div>
+    </form>
+  </div><!-- Subscribe Form -->
+          </div>
+      </div>
+  </div>
+</section><!-- ./Widget Section -->
+
+<footer class="footer_section">
+<div class="container">
+<div class="copyright">&copy; 2022 Apexcryptosfx Powered by Apexcryptosfx</div>
+</div>
+</footer><!-- /.footer_section -->
+
+<a data-scroll href="#header" id="scroll-to-top"><i class="arrow_up"></i></a>
+<!-- GetButton.io widget -->
+<script type="text/javascript">
+  (function () {
+      var options = {
+          whatsapp: "+1(810)288-6248", // WhatsApp number
+          call_to_action: "Message us", // Call to action
+          button_color: "#FF6550", // Color of button
+          position: "left", // Position may be 'right' or 'left'
+      };
+      var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
+      var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+      s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+      var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+  })();
+</script>
+<script>
+    window.onload = (event) => {
+    let myAlert = document.querySelectorAll('.toast');
+    let bsAlert = new bootstrap.Toast(myAlert);
+    bsAlert.show();
+}
+</script>
+<!-- /GetButton.io widget -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+<!-- jQuery Lib -->
+<script src="/static/js/vendor/jquery-1.12.4.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="/static/js/vendor/bootstrap.min.js"></script>
+<!-- Tether JS -->
+<script src="/static/js/vendor/tether.min.js"></script>
+<!-- Counterup JS -->
+<script src="/static/js/vendor/jquery.counterup.min.js"></script>
+<!-- waypoints js -->
+<script src="/static/js/vendor/jquery.waypoints.v2.0.3.min.js"></script>
+<!-- Imagesloaded JS -->
+<script src="/static/js/vendor/imagesloaded.pkgd.min.js"></script>
+<!-- OWL-Carousel JS -->
+<script src="/static/js/vendor/owl.carousel.min.js"></script>
+<!-- Nivo Slider JS -->
+<script src="/static/js/vendor/jquery.nivo.slider.pack.js"></script>
+<!-- isotope JS -->
+<script src="/static/js/vendor/jquery.isotope.v3.0.2.js"></script>
+<!-- Smooth Scroll JS -->
+<script src="/static/js/vendor/smooth-scroll.min.js"></script>
+<!-- venobox JS -->
+<script src="/static/js/vendor/venobox.min.js"></script>
+<!-- ajaxchimp JS -->
+<script src="/static/js/vendor/jquery.ajaxchimp.min.js"></script>
+<!-- Slick Nav JS -->
+<script src="/static/js/vendor/jquery.slicknav.min.js"></script>
+<!-- Webticker JS -->
+<script src="/static/js/vendor/jquery.webticker.min.js"></script>
+<!-- Wow JS -->
+<script src="/static/js/vendor/wow.min.js"></script>
+<!-- Contact JS -->
+<script src="/static/js/contact.js"></script>
+<!-- Main JS -->
+<script src="/static/js/main.js"></script>
+<script src="//code.tidio.co/a1gup4t9ss8wdusmwzabeviq4zl0om7e.js" async></script>
